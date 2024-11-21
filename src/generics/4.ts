@@ -5,17 +5,7 @@ type User = {
   password: string;
 };
 
-function createOrUpdateUser<T extends Partial<User>>(initialValues: T) {
-  const user: User = {
-    name: "DefaultName",
-    surname: "DefaultSurname",
-    email: "",
-    password: "",
-    ...initialValues,
-  };
-
-  console.log("Generics task_4:", user);
-}
+function createOrUpdateUser<T extends Partial<User>>(initialValues: T) {}
 
 createOrUpdateUser({
   email: "user@mail.com",
